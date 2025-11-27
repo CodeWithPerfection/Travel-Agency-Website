@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parvati tour & travel — Varanasi</title>
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{--brand:#d83939;--accent:#0b9b57}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    .topbar{background:#0b64a7;color:#fff;padding:6px 0;font-size:14px}
+    .logo h3{margin:0;color:var(--brand);font-weight:700}
+    .hero{padding:60px 0}
+    .hero h1{font-size:2.6rem;font-weight:700}
+    .hero p{font-size:1rem;color:#444}
+    .whatsapp-fab{position:fixed;right:18px;bottom:18px;width:62px;height:62px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(11,155,87,0.18);z-index:1050}
+    .whatsapp-fab img{width:36px;height:36px}
+    .enquire-btn{background:var(--brand);color:#fff;border-radius:6px;padding:10px 18px}
+    .service-card{border:0;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    footer{background:#f8f9fa;padding:28px 0;margin-top:40px}
+    @media (max-width:576px){.hero h1{font-size:1.6rem}}
+  </style>
+</head>
+<body>
+
+  <!-- Top info bar -->
+  <div class="topbar text-center">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div><small>✉️ contact: info@Parvatitravels.com</small></div>
+      <div><small>📞 +91-8081518587 | +91-7068878517</small></div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://via.placeholder.com/70x50.png?text=Logo" alt="logo" class="me-2">
+        <div class="logo">
+          <h3 class="mb-0">Parvati</h3>
+          <small class="text-muted">Travel + Tours</small>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tour Packages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Varanasi City Tour</a></li>
+              <li><a class="dropdown-item" href="#">Ganga Aarti Package</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          <li class="nav-item ms-3 d-none d-lg-block"><a class="enquire-btn" href="#" data-bs-toggle="modal" data-bs-target="#enquireModal">ENQUIRE NOW!</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1>Travel Agency Services in Varanasi</h1>
+          <p>Experience the best travel services in Varanasi — hassle-free boat bookings, cab rides, expert tour guides, comfortable stays, and seamless travel arrangements for a memorable journey. Book now for a smooth and unforgettable experience!</p>
+
+          <div class="d-flex gap-3 mt-4">
+            <a class="btn btn-outline-primary" href="#contact">Explore Packages</a>
+            <a class="btn enquire-btn" href="#" data-bs-toggle="modal" data-bs-target="#enquireModal">Enquire Now</a>
+            <a class="btn btn-link text-decoration-none" href="tel:+918081518587">Call Us: +91-8081518587</a>
+          </div>
+
+          <p class="mt-3"><a href="#" class="text-decoration-none">Whatsapp Us</a></p>
+        </div>
+
+        <div class="col-lg-5 d-none d-lg-block">
+          <img src="/assets/hero-varanasi.jpg" alt="Varanasi" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <h3>Our Services</h3>
+          <p class="text-muted">We provide a full range of travel services — boat bookings, local cabs, hotel bookings, guided tours, pilgrimage packages, and airport transfers.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 service-card h-100">
+            <h5>Boat Bookings</h5>
+            <p class="small text-muted">Morning and evening Ganga boat rides with experienced boatmen.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 service-card h-100">
+            <h5>Local Cabs</h5>
+            <p class="small text-muted">Comfortable cabs for local sightseeing and airport transfers.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 service-card h-100">
+            <h5>Guided Tours</h5>
+            <p class="small text-muted">Certified guides who know Varanasi’s history and culture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-4 gallery">
+    <div class="container">
+      <h4 class="mb-3">Gallery</h4>
+      <div class="row g-3">
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1505765051756-5f0b14bb2b5d?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1505765051756-5f0b14bb2b5d?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Parvati Travel & Tours</h5>
+          <p class="small text-muted">Address: Varanasi, Uttar Pradesh, India • Email: info@Parvatitravels.com • Phone: +91-8081518587</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="small">© 2025 Parvati Travel & Tours. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-fab" href="https://wa.me/918081518587" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp">
+  </a>
+
+  <!-- Enquiry Modal -->
+  <div class="modal fade" id="enquireModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enquire Now</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="enquireForm">
+            <div class="mb-3"><label class="form-label">Name</label><input class="form-control" required></div>
+            <div class="mb-3"><label class="form-label">Phone</label><input class="form-control" required></div>
+            <div class="mb-3"><label class="form-label">Message</label><textarea class="form-control" rows="3"></textarea></div>
+            <div class="text-end"><button class="btn enquire-btn" type="submit">Send</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Simple client-side form handler (replace with backend API)
+    document.getElementById('enquireForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // collect values and show a simple thank-you
+      const name = this.querySelector('input').value || 'Guest';
+      const modal = bootstrap.Modal.getInstance(document.getElementById('enquireModal'));
+      modal.hide();
+      alert('Thanks ' + name + '! We will contact you shortly.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
