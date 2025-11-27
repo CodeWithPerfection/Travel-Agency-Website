@@ -3,25 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Parvati tour & travel — Varanasi</title>
+  <title>Explore Varanasi | Yaduvanshi Travel &amp; Tours</title>
+</title>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Explore Varanasi | Yaduvanshi Travel & Tours" />
+  <meta property="og:description" content="Book Ganga boat rides, guided tours, hotels and transfers in Varanasi. Personalized packages, local guides, 24/7 support." />
+  <meta property="og:image" content="https://www.travelbaits.in/wp-content/uploads/2024/02/Varanasi-City-Tour.png" />
+  <meta property="og:type" content="website" />
 
   <!-- Bootstrap 5 (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    :root{--brand:#d83939;--accent:#0b9b57}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    .topbar{background:#0b64a7;color:#fff;padding:6px 0;font-size:14px}
+    :root{--brand:#399bd8;--accent:#0b9b57;--dark:#0f172a}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:#fff;color:#111}
+
+    /* Preloader */
+    #preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;z-index:2000}
+    #preloader .dot{width:12px;height:12px;border-radius:50%;background:var(--brand);margin:4px;animation:pop .9s infinite}
+    #preloader .dot:nth-child(2){animation-delay:.15s}
+    #preloader .dot:nth-child(3){animation-delay:.30s}
+    @keyframes pop{0%{transform:scale(.6);opacity:.4}50%{transform:scale(1);opacity:1}100%{transform:scale(.6);opacity:.4}}
+
+    .topbar{background:#0b88a7;color:#fff;padding:6px 0;font-size:14px}
     .logo h3{margin:0;color:var(--brand);font-weight:700}
     .hero{padding:60px 0}
     .hero h1{font-size:2.6rem;font-weight:700}
     .hero p{font-size:1rem;color:#444}
-    .whatsapp-fab{position:fixed;right:18px;bottom:18px;width:62px;height:62px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(11,155,87,0.18);z-index:1050}
-    .whatsapp-fab img{width:36px;height:36px}
+    .whatsapp-fab, .phone-fab{position:fixed;right:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.12);z-index:1050}
+    .whatsapp-fab{bottom:18px;width:62px;height:62px;background:var(--accent)}
+    .phone-fab{bottom:90px;width:56px;height:56px;background:var(--brand)}
+    .whatsapp-fab img, .phone-fab img{width:36px;height:36px}
     .enquire-btn{background:var(--brand);color:#fff;border-radius:6px;padding:10px 18px}
     .service-card{border:0;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
     .gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
-    footer{background:#f8f9fa;padding:28px 0;margin-top:40px}
+    footer{background:var(--dark);padding:28px 0;margin-top:40px;color:#fff}
+    .sticky-top-custom{position:sticky;top:0;z-index:1020}
+    .navbar-brand img{object-fit:contain}
+
+    /* Testimonials carousel tweaks */
+    .testimonial{background:#fff;border-radius:10px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+
+    /* FAQ styles */
+    .faq .accordion-button:not(.collapsed){color:var(--brand)}
+
     @media (max-width:576px){.hero h1{font-size:1.6rem}}
   </style>
 </head>
@@ -30,19 +57,20 @@
   <!-- Top info bar -->
   <div class="topbar text-center">
     <div class="container d-flex justify-content-between align-items-center">
-      <div><small>✉️ contact: info@Parvatitravels.com</small></div>
-      <div><small>📞 +91-8081518587 | +91-7068878517</small></div>
+      <div><small>✉️ Contact: Manikanty987@gmail.com</small></div>
+      <div class="topbar"> &nbsp;&nbsp; &nbsp; हर हर महादेव 🙏</div>
+      <div><small>📞 +91-72948457501 | +91-8539986164</small></div>
     </div>
   </div>
 
   <!-- Header / Nav -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top-custom">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="https://via.placeholder.com/70x50.png?text=Logo" alt="logo" class="me-2">
+      <a class="navbar-brand d-flex align-items-center" href="#Home">
+        <img src="https://www.travelbaits.in/wp-content/uploads/2024/02/Varanasi-City-Tour.png" alt="Yaduvanshi Travel logo" class="me-2" width="100" height="50">
         <div class="logo">
-          <h3 class="mb-0">Parvati</h3>
-          <small class="text-muted">Travel + Tours</small>
+          <h3 class="mb-0">Yaduvanshi</h3>
+          <small class="text-muted">Travel &amp; Tours</small>
         </div>
       </a>
 
@@ -52,13 +80,20 @@
 
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          
+          <li class="nav-item"><a class="nav-link active" href="#Home">Home</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#about-us">Abouthh Us</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tour Packages</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Varanasi City Tour</a></li>
-              <li><a class="dropdown-item" href="#">Ganga Aarti Package</a></li>
+             <li><a class="dropdown-item" href="#">Kashi Vishwanath Temple</a></li>
+              <li><a class="dropdown-item" href="#">Dashashwamedh Ghat + Evening Ganga Aarti</a></li>
+              <li><a class="dropdown-item" href="#">Sunrise / Evening Boat Ride on Ganges River</a></li>
+              <li><a class="dropdown-item" href="#">Ramnagar Fort + Museum</a></li>
+              <li><a class="dropdown-item" href="#">Tulsi Manas Temple</a></li>
+              <li><a class="dropdown-item" href="#">Banaras Hindu University (BHU) + Bharat Kala Bhavan Museum</a></li>
+              <li><a class="dropdown-item" href="#">Local Weaving Workshops & Shopping for Banarasi Crafts</a></li>
+              <li><a class="dropdown-item" href="#">Day Trip to Sarnath (Buddhist Heritage + Museum)</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
@@ -79,28 +114,48 @@
           <p>Experience the best travel services in Varanasi — hassle-free boat bookings, cab rides, expert tour guides, comfortable stays, and seamless travel arrangements for a memorable journey. Book now for a smooth and unforgettable experience!</p>
 
           <div class="d-flex gap-3 mt-4">
-            <a class="btn btn-outline-primary" href="#contact">Explore Packages</a>
+            <a class="btn btn-outline-primary" href="#services">Explore Packages</a>
             <a class="btn enquire-btn" href="#" data-bs-toggle="modal" data-bs-target="#enquireModal">Enquire Now</a>
-            <a class="btn btn-link text-decoration-none" href="tel:+918081518587">Call Us: +91-8081518587</a>
+            <a class="btn btn-link text-decoration-none" href="tel:+917294845750">Call Us: +91-7294845750</a>
           </div>
 
-          <p class="mt-3"><a href="#" class="text-decoration-none">Whatsapp Us</a></p>
+           <p class="mt-3"><a href="https://wa.me/917294845750" class="text-decoration-none">Whatsapp Us</a></p>
         </div>
 
-        <div class="col-lg-5 d-none d-lg-block">
-          <img src="/assets/hero-varanasi.jpg" alt="Varanasi" class="img-fluid rounded shadow-sm">
+        <div class="col-lg-5 text-center">
+          <img src="https://c.ndtvimg.com/2024-06/e8rijmvo_aarti_625x300_18_June_24.jpg" alt="Varanasi Travel" class="img-fluid rounded shadow-sm">       
+
+      </div>
+    </div>
+  </section>
+  
+    <!-- About Us Section -->
+  <section id="about-us" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h3>About Yaduvanshi Travel &amp; Tours</h3>
+          <p class="text-muted">We are a Varanasi-based travel agency specializing in personalized tours, reliable transportation and comfortable stays. Our team ensures safe, authentic and memorable experiences for all travelers.</p>
+
+          <div class="mt-3">
+            <a class="btn btn-outline-secondary me-2" href="#testimonials">Read Reviews</a>
+            <a class="btn enquire-btn" href="#" data-bs-toggle="modal" data-bs-target="#enquireModal">Book Now</a>
+          </div>
+        </div>
+        <div class="col-md-6 mt-3 mt-md-0">
+          <img src="https://www.varanasibest.com/wp-content/uploads/Kashi-Vishwanath-Temple-Image-Varanasi-Best-2.jpg" alt="Kashi Vishwanath" class="img-fluid rounded shadow-sm" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+ <!-- Services -->
   <section id="services" class="py-5">
     <div class="container">
       <div class="row mb-4">
         <div class="col-md-8">
           <h3>Our Services</h3>
-          <p class="text-muted">We provide a full range of travel services — boat bookings, local cabs, hotel bookings, guided tours, pilgrimage packages, and airport transfers.</p>
+          <p class="text-muted">Complete travel solutions: Ganga boat rides, city tours, hotel bookings, transport, pilgrimage packages and local experiences.</p>
         </div>
       </div>
 
@@ -108,77 +163,300 @@
         <div class="col-md-4">
           <div class="p-4 service-card h-100">
             <h5>Boat Bookings</h5>
-            <p class="small text-muted">Morning and evening Ganga boat rides with experienced boatmen.</p>
+            <p class="small text-muted">Sunrise &amp; sunset boat rides with certified boatmen.</p>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="p-4 service-card h-100">
-            <h5>Local Cabs</h5>
-            <p class="small text-muted">Comfortable cabs for local sightseeing and airport transfers.</p>
+            <h5>Local Cab Services</h5>
+            <p class="small text-muted">Clean taxis for sightseeing, outstation and airport transfers.</p>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="p-4 service-card h-100">
-            <h5>Guided Tours</h5>
-            <p class="small text-muted">Certified guides who know Varanasi’s history and culture.</p>
+            <h5>Guided City Tours</h5>
+            <p class="small text-muted">Local guides with deep knowledge of Varanasi's heritage.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 service-card h-100">
+            <h5>Hotel &amp; Stay Booking</h5>
+            <p class="small text-muted">Budget to premium hotels with easy booking support.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 service-card h-100">
+            <h5>Pilgrimage Packages</h5>
+            <p class="small text-muted">Tailored spiritual itineraries and group packages.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 service-card h-100">
+            <h5>Pickup &amp; Drop</h5>
+            <p class="small text-muted">Punctual transfers from airport and railway station.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
+   <!-- Why Choose Us -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3>Why Choose Us</h3>
+      <div class="row g-3 mt-3">
+        <div class="col-md-3">
+          <div class="p-3 text-center border rounded">
+            <strong>24/7 Support</strong>
+            <p class="mb-0 small text-muted">Always available to help.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-3 text-center border rounded">
+            <strong>Verified Guides</strong>
+            <p class="mb-0 small text-muted">Experienced local guides.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-3 text-center border rounded">
+            <strong>Best Prices</strong>
+            <p class="mb-0 small text-muted">Transparent pricing, no hidden fees.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-3 text-center border rounded">
+            <strong>Safe Travels</strong>
+            <p class="mb-0 small text-muted">Sanitized vehicles and safe practices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Testimonials (Bootstrap Carousel) -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h3>What Our Travelers Say</h3>
+      <div id="testimonialCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial p-4">
+              <p class="mb-1">"Amazing boat ride at sunrise — very professional and friendly staff!"</p>
+              <small class="text-muted">— Priya, Mumbai</small>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial p-4">
+              <p class="mb-1">"Great guide. Explained the history beautifully. Highly recommended."</p>
+              <small class="text-muted">— Manikant, Mumbai</small>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial p-4">
+              <p class="mb-1">"Seamless hotel booking and timely pickup. Trusted service."</p>
+              <small class="text-muted">— Ankit, Delhi</small>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+ <!-- Gallery -->
   <section class="py-4 gallery">
     <div class="container">
       <h4 class="mb-3">Gallery</h4>
       <div class="row g-3">
-        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
-        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1505765051756-5f0b14bb2b5d?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
-        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1505765051756-5f0b14bb2b5d?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
-        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" alt="pic"></div>
+        <div class="col-6 col-md-3"><img src="https://www.avaniholidays.in/images/package_image/varanasi-istock-1089941-1647123121_QjUjkZl.webp" alt="Varanasi Ghats" class="img-fluid" loading="lazy"></div>
+        <div class="col-6 col-md-3"><img src="https://shaktatravels.com/pic/flexslider/varanasi-tour1.jpg" alt="Boat Ride" class="img-fluid" loading="lazy"></div>
+        <div class="col-6 col-md-3"><img src="https://www.travelbaits.in/wp-content/uploads/2024/02/Varanasi-City-Tour.png" alt="Varanasi" class="img-fluid" loading="lazy"></div>
+        <div class="col-6 col-md-3"><img src="https://mytriphack.com/wp-content/uploads/2018/10/Ganga-Aarti-Varanasi.jpg" alt="Ganga Aarti" class="img-fluid" loading="lazy"></div>
+        <div class="col-6 col-md-3"><img src="https://c.ndtvimg.com/2024-06/e8rijmvo_aarti_625x300_18_June_24.jpg" alt="Evening Aarti" class="img-fluid" loading="lazy"></div>
+        <div class="col-6 col-md-3"><img src="https://www.tripsavvy.com/thmb/SVlMiaf-h34JB2yiTABMdoy9o5Y=/2111x1420/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-521727272-591c122f5f9b58f4c031d030.jpg" alt="Varanasi Streets" class="img-fluid" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+ 
+
+    <!-- FAQ -->
+  <section class="py-5 bg-light faq">
+    <div class="container">
+      <h3>Frequently Asked Questions</h3>
+      <div class="accordion mt-3" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How early should I book a boat ride?</button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">We recommend booking at least one day in advance for peak season. For sunrise rides, book 2-3 days ahead during busy months.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Do you provide airport pickup?</button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes — we offer pickup and drop services from Lal Bahadur Shastri Airport and Varanasi Junction with prior notice.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is a guide included in the tour?</button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Guides are included in selected packages; otherwise they can be added for a small additional fee. Contact us for package details.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / FOOTER -->
-  <footer id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>Parvati Travel & Tours</h5>
-          <p class="small text-muted">Address: Varanasi, Uttar Pradesh, India • Email: info@Parvatitravels.com • Phone: +91-8081518587</p>
+<!-- FOOTER -->
+<footer id="contact" class="pt-5 pb-4">
+    <div class="container text-white">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="mb-3">Yaduvanshi Travel &amp; Tours</h5>
+          <p class="small" style="opacity:0.85;">Trusted travel partner in Varanasi for boat rides, guided tours, hotel bookings and transfers.</p>
         </div>
-        <div class="col-md-6 text-md-end">
-          <p class="small">© 2025 Parvati Travel & Tours. All Rights Reserved.</p>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Contact Us</h6>
+          <p class="small mb-1">📍 Varanasi, Uttar Pradesh, India</p>
+          <p class="small mb-1">✉️ Email: <a href="mailto:info@Yaduvanshitravels.com" style="color:#38bdf8;">info@Yaduvanshitravels.com</a></p>
+          <p class="small mb-1">📞 Phone: <a href="tel:+917294845750" style="color:#38bdf8;">+91-7294845750</a></p>
+
+          <div class="mt-3">
+            <a href="#top" style="margin-right:12px; font-size:20px; color:#fff;">🏠</a>
+            <a href="https://instagram.com/" target="_blank" style="margin-right:12px;"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24"></a>
+            <a href="https://facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24"></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Our Location</h6>
+          <div style="border-radius:8px; overflow:hidden; background:#fff;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.3382183954955!2d83.002!3d25.3176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fefd617e0d267%3A0xe5563d3e748c66de!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000" 
+              width="100%" 
+              height="200" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <hr class="mt-4" style="border-color:rgba(255,255,255,0.1);">
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="small mb-0" style="opacity:0.75;">© 2025 Yaduvanshi Travel &amp; Tours. All Rights Reserved.</p>
         </div>
       </div>
     </div>
   </footer>
 
+
   <!-- WhatsApp Floating Button -->
-  <a class="whatsapp-fab" href="https://wa.me/918081518587" target="_blank" aria-label="Chat on WhatsApp">
+  <a class="whatsapp-fab" href="https://wa.me/917294845750" target="_blank" aria-label="Chat on WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp">
   </a>
 
-  <!-- Enquiry Modal -->
-  <div class="modal fade" id="enquireModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Enquire Now</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form id="enquireForm">
-            <div class="mb-3"><label class="form-label">Name</label><input class="form-control" required></div>
-            <div class="mb-3"><label class="form-label">Phone</label><input class="form-control" required></div>
-            <div class="mb-3"><label class="form-label">Message</label><textarea class="form-control" rows="3"></textarea></div>
-            <div class="text-end"><button class="btn enquire-btn" type="submit">Send</button></div>
-          </form>
-        </div>
+   <!-- WhatsApp & Phone Floating Buttons -->
+  <a class="whatsapp-fab" href="https://wa.me/917294845750" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+ <a class="phone-fab" href="tel:+917294845750" aria-label="Call us">
+  <img src="data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='white'>
+  <path d='M6.6 10.8c1.1 2.2 2.9 4 5.1 5.1l1.5-1.5c.2-.2.5-.3.8-.2 1 .3 2 .4 3 .4.5 0 .9.4.9.9V19c0 .5-.4.9-.9.9C10.9 19.9 4.1 13.1 4.1 5.9 4.1 5.4 4.5 5 5 5h2.3c.5 0 .9.4 1 .9.1 1 .2 2 .5 3 .1.3 0 .6-.2.8L6.6 10.8z'/>
+  </svg>" alt="call">
+</a>
+
+
+ <!-- Enquiry Modal -->
+<div class="modal fade" id="enquireModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Enquire Now</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="enquireForm">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input class="form-control" placeholder="Enter phone number" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Write your message..."></textarea>
+          </div>
+          <div class="text-end">
+            <button class="btn enquire-btn" type="submit">Send via WhatsApp</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>
+<!-- Enquiry Modal Script-->
+<script>
+document.getElementById('enquireForm').addEventListener('submit', function(e){
+  e.preventDefault(); // Prevent form submission
+
+  // Collect values
+  const name = this.querySelector('input[placeholder="Enter your name"]').value.trim();
+  const phone = this.querySelector('input[placeholder="Enter phone number"]').value.trim();
+  const message = this.querySelector('textarea').value.trim();
+
+  if(!name || !phone){
+    alert("Please fill Name and Phone Number.");
+    return;
+  }
+
+  const whatsappNumber = "917294845750"; // Replace with your WhatsApp number
+  const text = `Name: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+
+  // Open WhatsApp in a popup
+  const width = 500;
+  const height = 600;
+  const left = (screen.width / 2) - (width / 2);
+  const top = (screen.height / 2) - (height / 2);
+  window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "WhatsApp", `width=${width},height=${height},top=${top},left=${left}`);
+
+  // Close the modal
+  const modal = bootstrap.Modal.getInstance(document.getElementById('enquireModal'));
+  modal.hide();
+
+  // Reset the form
+  this.reset();
+});
+</script>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
